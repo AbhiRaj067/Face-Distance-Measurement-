@@ -1,19 +1,18 @@
-# Face-Distance-Measurement-
-this project is done by me during my training at GB Softronics Solution
+# Face Distance Measurement
 
+_Developed during my internship at GB Softronics Solution_
 
-This project focused on building a system to measure the distance of a face from a camera in real-time using computer vision and Python. The solution utilized mathematical principles and image processing techniques to achieve accurate distance estimation.
+## Overview
 
-Key Features:
-Face Detection:
+This project implements a system to measure the distance from a person's face to the camera in real time using computer vision and Python. The solution combines mathematical principles and image processing techniques to deliver accurate estimations, with robust detection and practical visualization.
 
-Implemented face detection using OpenCV's pre-trained Haar cascades or Dlib's face detection models.
-Ensured robust detection across various lighting conditions and angles.
-Distance Calculation:
+## Key Features
 
-Used the principle of similar triangles to estimate the distance.
-Calculated the distance by measuring the width of the face in pixels on the camera feed and comparing it to a known reference width at a specific distance.
-Formula:
+- **Face Detection:**  
+  Uses OpenCV's pre-trained Haar cascades or Dlib/cvzone FaceMesh models for precise face localization, with reliability across varied lighting conditions and angles.
+
+- **Distance Calculation:**  
+  Estimates real-world distance utilizing the principle of similar triangles. Measures the pixel width of the detected face and compares it to a known reference width, calculating distance with the formula:  
 
 Distance
 =
@@ -25,26 +24,63 @@ Focal Length
 /
 Face Width in Image
 Distance=(Known Width×Focal Length)/Face Width in Image
-Determined the focal length through calibration with a known distance and face size.
-Real-Time Processing:
+The focal length is determined through a calibration process with a known face size at a fixed distance.
 
-Streamed video feed using a webcam and processed each frame to detect the face and measure the distance.
-Displayed the detected face and its corresponding distance on the video feed in real time.
-Output Display:
+- **Real-Time Processing:**  
+Streams and processes webcam video frames on-the-fly to detect faces and overlay distance measurement instantly.
 
-Superimposed the distance measurement directly on the live video feed using OpenCV's drawing tools.
-Provided a clear, dynamic visualization of the results.
-Challenges Overcome:
-Calibration: Adjusted the system for different cameras to ensure accurate focal length and distance calculations.
-Lighting Variations: Fine-tuned the face detection algorithm to work reliably in low-light or high-glare environments.
-Accuracy: Reduced noise in measurements by averaging multiple frames and handling edge cases, such as partially visible faces.
-Outcome:
-The project successfully measured the distance of a face from the camera in real-time with high accuracy. It demonstrated practical applications in areas like:
+- **Output Visualization:**  
+Displays the distance annotation and project details directly on the live video feed using OpenCV and cvzone drawing tools for clarity and impact.
 
-Enhancing user experiences in interactive systems.
-Monitoring and maintaining social distancing.
-Providing input for augmented reality (AR) applications.
-This project deepened my understanding of computer vision techniques, real-time video processing, and how mathematical concepts like similar triangles can solve real-world problems effectively.
+## Challenges and Solutions
+
+- **Camera Calibration:**  
+Adjusted for different webcams to achieve correct focal length and accurate results.
+- **Lighting Variations:**  
+Fine-tuned detection algorithms to function reliably in low-light and high-glare environments.
+- **Accuracy Enhancements:**  
+Smoothed output by averaging over multiple frames and managed edge cases (e.g., partial faces).
+
+## Outcome
+
+The project delivers reliable, real-time distance measurements, with promising applications in:
+- Interactive systems and user experience enhancement
+- Social distancing monitoring
+- AR/VR and gesture input
+
+This work deepened my understanding of computer vision, real-time video processing, and the effective application of mathematical models to solve real-world problems.
+
+## Technologies Used
+
+- Python 3
+- OpenCV
+- Dlib or cvzone (FaceMeshModule)
+- numpy
+
+## Setup & Usage
+
+1. **Install dependencies:**
+
+2. **Run the script:**
+
+Ensure your webcam is connected and accessible.
+
+## Example Output
+
+Live webcam feed displaying:
+- Detected face(s) with bounding boxes or landmarks
+- Real-time distance annotation in centimeters
+- Dynamic project credentials beside the video frame
+
+## Author
+
+**Abhishek Raj**  
+Intern, GB Softronics Solution  
+Employee ID: GBSOFT-INT175
+
+---
+
+For feedback, suggestions, or collaboration, please open a GitHub issue or contact via profile.
 
 
 
